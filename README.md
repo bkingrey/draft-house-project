@@ -1,5 +1,4 @@
-# angularjs-webpack-starter
-
+# Drafthouse-Project
 A complete, yet simple, starter for AngularJS using Webpack and UI-Router.
 
 This workflow serves as a starting point for building Angular 1.x applications using Webpack and UI-Router.
