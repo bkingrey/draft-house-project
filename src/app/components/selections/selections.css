@@ -7,7 +7,8 @@
   font-family: 'Nunito', sans-serif;
 }
 .movie-finder {
-  width: 752px;
+  width: 100%;
+  max-width: 752px;
   background: #ffffff;
   box-shadow: 0px 2px 4px rgba(24, 17, 3, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12),
     0px 1px 5px rgba(24, 17, 3, 0.2);
@@ -36,20 +37,25 @@
   color: rgba(9, 9, 9, 0.6);
   font-weight: bold;
 }
+
 .movie-finder-inner-header > span {
   color: #090909;
 }
+
 .theater-button {
   width: 176px;
   height: 40px;
-
-  /* White / 500 */
-
   background: #ffffff;
   box-shadow: 0px 2px 4px rgba(24, 17, 3, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12),
     0px 1px 5px rgba(24, 17, 3, 0.2);
   border-radius: 4px;
   font-weight: 800;
+}
+
+.active > .theater-button {
+  background: #f0b323;
+  border: none;
+  box-shadow: none;
 }
 
 .movie-finder-location {
@@ -62,6 +68,7 @@
   display: -ms-flexbox;
   display: flex;
   align-items: center;
+  color: #090909;
 }
 .movie-finder-location > span {
   /* font-family: Futura PT; */
@@ -72,7 +79,6 @@
   display: flex;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #090909;
   margin-left: 18px;
   margin-right: 40px;
   text-align: left;
@@ -81,4 +87,9 @@
 
 .movie-finder-location > img {
   margin-right: 16px;
+}
+
+.movie-finder-location:hover {
+  background: #090909;
+  color: #f0b323;
 }

@@ -1,14 +1,14 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
-import './about.css';
-import template from './about.html';
+import './selections.css';
+import template from './selections.html';
 
-class AboutCtrl {
+class SelectionsCtrl {
   constructor($scope, $http, $log) {
+    this.title = 'FIND A MOVIE';
     this.selectedTheater = $scope.selectedTheater;
     this.selectedSessions = $scope.selectedSessions;
-    this.title = 'FIND A MOVIE';
     this.films = $scope.films;
     this.heroSlider = $scope.heroSlider;
     this.market = $scope.market;
@@ -17,7 +17,7 @@ class AboutCtrl {
 
     $scope.goToTheater = function (session) {
       const url = `https://drafthouse.com/show/${session.filmSlug}?cinemaId=${session.cinemaId}`;
-      window.location.href = url;
+      window.open(url, '_blank') || window.location.replace(url);
     };
 
     $scope.selectedATheater = function (theater) {
@@ -56,12 +56,14 @@ class AboutCtrl {
 
     var successCallBack = function (response) {
       const res = response.data;
+      $scope.sessionHovered = false;
       $scope.films = res.data.films;
       $scope.heroSlider = res.data.heroSlider;
       $scope.market = res.data.market;
       $scope.sessionAttributes = res.data.sessionAttributes;
       $scope.sessions = res.data.sessions;
     };
+
     var errorCallBack = function (response) {
       this.error = response.data;
     };
@@ -72,23 +74,23 @@ class AboutCtrl {
   }
 }
 
-AboutCtrl.$inject = ['$scope', '$http', '$log'];
+SelectionsCtrl.$inject = ['$scope', '$http', '$log'];
 
-let about = {
+let selections = {
   template: template,
-  controller: AboutCtrl,
+  controller: SelectionsCtrl,
 };
 
-const MODULE_NAME = 'about';
+const MODULE_NAME = 'selections';
 
 angular
   .module(MODULE_NAME, [uiRouter])
   .config(($stateProvider) => {
-    $stateProvider.state('about', {
-      url: '/about',
-      template: '<about></about>',
+    $stateProvider.state('selections', {
+      url: '/selections',
+      template: '<selections></selections>',
     });
   })
-  .component('about', about);
+  .component('selections', selections);
 
 export default MODULE_NAME;

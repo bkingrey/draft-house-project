@@ -1,7 +1,8 @@
 .welcome-header {
   position: absolute;
   width: 100%;
-  height: 560px;
+  height: 130vw;
+  max-height: 560px;
   left: 0px;
   top: 0px;
   background: linear-gradient(135.99deg, #ff009d 3.42%, #f5b324 96.5%);
@@ -54,8 +55,12 @@
   border-color: #090909 transparent transparent transparent;
   top: calc(100% - 1px);
 }
-
+.banner-container {
+  display: flex;
+  justify-content: center;
+}
 .hero-logo {
   position: absolute;
   top: 100px;
+  max-width: 100%;
 }
