@@ -14,20 +14,23 @@ class HomeCtrl {
 HomeCtrl.$inject = ['$log'];
 
 let home = {
-    template: template,
-    controller: HomeCtrl
+  template: template,
+  controller: HomeCtrl,
 };
 
 const MODULE_NAME = 'home';
 
-angular.module(MODULE_NAME, [uiRouter])
-  .config(function($stateProvider, $urlRouterProvider) {
-    // For initial application load from base url
-    $urlRouterProvider.otherwise('/');
-    // defines routing for this component
+angular
+  .module(MODULE_NAME, [uiRouter])
+  .config(function ($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('');
     $stateProvider.state('home', {
-      url: '/',
-      template: '<home></home>'
+      url: '',
+      template: '<home></home>',
+    });
+    $stateProvider.state('theaters', {
+      url: 'theaters/{id}',
+      template: '<home></home>',
     });
   })
   .component('home', home);

@@ -9,7 +9,6 @@ import template from './app.html';
 
 export class AppCtrl {
   constructor($log) {
-    // $log.info('AppCtrl instantiated');
     this.url = 'https://github.com/preboot/angular-webpack';
   }
 }

@@ -4,15 +4,15 @@
         <h4 class="movie-finder-header">{{$ctrl.title}}</h1>
           <div class="row mt-5">
               <h6 class="movie-finder-inner-header">SELECT THEATER</h6>
-              <div class="col-4" ng-repeat="theater in market.cinemas">
-                <button class="theater-button">{{theater.name}}</button>
+              <div class="col-4 my-2" ng-repeat="theater in market.cinemas">
+                <a ui-sref="theaters({id: theater.slug})" ui-sref-active="active"><button class="theater-button" ng-click="selectedATheater(theater)">{{theater.name}}</button></a>
               </div>
           </div>
-          <div class="row mt-5">
-            <h6 class="movie-finder-inner-header">FILMS PLAYING AT <span>LAKELINE</span></h6>
-            <div class="col-12">
-                <button class="movie-finder-location">
-                    <span>AD ASTRA</span>
+          <div class="row mt-5" ng-if="selectedTheater">
+            <h6 class="movie-finder-inner-header">FILMS PLAYING AT <span>{{selectedTheater.name}}</span></h6>
+            <div class="col-12 my-2" ng-repeat="session in selectedSessions">
+                <button class="movie-finder-location" ng-click="goToTheater(session)">
+                    <span>{{session.filmName}}</span>
                     <img src="../../../img/Cart.png">
                 </button>
             </div>
