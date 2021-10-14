@@ -1,3 +1,9 @@
+:root {
+  --main-box-shadow: 0px 2px 4px rgba(24, 17, 3, 0.14),
+    0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(24, 17, 3, 0.2);
+  --main-bg-color: #090909;
+  --main-yellow: #f0b323;
+}
 .movie-finder-container {
   position: absolute;
   width: 100%;
@@ -10,12 +16,10 @@
   width: 100%;
   max-width: 752px;
   background: #ffffff;
-  box-shadow: 0px 2px 4px rgba(24, 17, 3, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12),
-    0px 1px 5px rgba(24, 17, 3, 0.2);
+  box-shadow: var(--main-box-shadow);
   border-radius: 4px;
 }
 .movie-finder-header {
-  /* font-family: Futura PT; */
   font-size: 26px;
   line-height: 30px;
   text-align: center;
@@ -29,7 +33,6 @@
   max-width: 600px;
 }
 .movie-finder-inner-header {
-  /* font-family: Futura PT; */
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.5px;
@@ -39,21 +42,25 @@
 }
 
 .movie-finder-inner-header > span {
-  color: #090909;
+  color: var(--main-bg-color);
 }
 
 .theater-button {
   width: 176px;
   height: 40px;
   background: #ffffff;
-  box-shadow: 0px 2px 4px rgba(24, 17, 3, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12),
-    0px 1px 5px rgba(24, 17, 3, 0.2);
+  box-shadow: var(--main-box-shadow);
   border-radius: 4px;
   font-weight: 800;
 }
+@media only screen and (max-width: 575px) {
+  .theater-button {
+    width: 100%;
+  }
+}
 
 .active > .theater-button {
-  background: #f0b323;
+  background: var(--main-yellow);
   border: none;
   box-shadow: none;
 }
@@ -68,10 +75,9 @@
   display: -ms-flexbox;
   display: flex;
   align-items: center;
-  color: #090909;
+  color: var(--main-bg-color);
 }
 .movie-finder-location > span {
-  /* font-family: Futura PT; */
   font-style: normal;
   font-weight: 800;
   font-size: 22px;
@@ -90,6 +96,6 @@
 }
 
 .movie-finder-location:hover {
-  background: #090909;
-  color: #f0b323;
+  background: var(--main-bg-color);
+  color: var(--main-yellow);
 }
