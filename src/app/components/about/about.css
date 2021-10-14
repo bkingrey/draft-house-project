@@ -1,0 +1,82 @@
+.movie-finder-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 424px;
+  font-family: 'Nunito', sans-serif;
+}
+.movie-finder {
+  width: 752px;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(24, 17, 3, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12),
+    0px 1px 5px rgba(24, 17, 3, 0.2);
+  border-radius: 4px;
+}
+.movie-finder-header {
+  /* font-family: Futura PT; */
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: 800;
+}
+
+.movie-finder-inner {
+  max-width: 600px;
+}
+.movie-finder-inner-header {
+  /* font-family: Futura PT; */
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: rgba(9, 9, 9, 0.6);
+  font-weight: bold;
+}
+.movie-finder-inner-header > span {
+  color: #090909;
+}
+.theater-button {
+  width: 176px;
+  height: 40px;
+
+  /* White / 500 */
+
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(24, 17, 3, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12),
+    0px 1px 5px rgba(24, 17, 3, 0.2);
+  border-radius: 4px;
+  font-weight: 800;
+}
+
+.movie-finder-location {
+  box-shadow: 0px 2px 4px rgb(24 17 3 / 14%), 0px 3px 4px rgb(0 0 0 / 12%),
+    0px 1px 5px rgb(24 17 3 / 20%);
+  border-radius: 4px;
+  font-weight: 800;
+  width: 100%;
+  height: 40px;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+}
+.movie-finder-location > span {
+  /* font-family: Futura PT; */
+  font-style: normal;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 28px;
+  display: flex;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #090909;
+  margin-left: 18px;
+  flex: 1;
+}
+
+.movie-finder-location > img {
+  margin-right: 16px;
+}

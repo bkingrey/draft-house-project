@@ -17,16 +17,12 @@ export class AppCtrl {
 AppCtrl.$inject = ['$log'];
 
 export const appDirective = {
-    template: template,
-    controller: AppCtrl,
+  template: template,
+  controller: AppCtrl,
 };
 
 const MODULE_NAME = 'app';
 
-angular.module(MODULE_NAME, [
-  home,
-  about,
-])
-  .component('app', appDirective);
+angular.module(MODULE_NAME, [home, about]).component('app', appDirective);
 
 export default MODULE_NAME;

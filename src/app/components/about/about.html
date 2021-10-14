@@ -1,3 +1,22 @@
-<div>
-    <h1>{{$ctrl.title}}</h1>
+<div class="movie-finder-container">
+  <div class="movie-finder">
+      <div class="movie-finder-inner container my-5">
+        <h4 class="movie-finder-header">{{$ctrl.title}}</h1>
+          <div class="row mt-5">
+              <h6 class="movie-finder-inner-header">SELECT THEATER</h6>
+              <div class="col-4" ng-repeat="theater in market.cinemas">
+                <button class="theater-button">{{theater.name}}</button>
+              </div>
+          </div>
+          <div class="row mt-5">
+            <h6 class="movie-finder-inner-header">FILMS PLAYING AT <span>LAKELINE</span></h6>
+            <div class="col-12">
+                <button class="movie-finder-location">
+                    <span>AD ASTRA</span>
+                    <img src="../../../img/Cart.png">
+                </button>
+            </div>
+          </div>
+      </div>
+  </div>
 </div>

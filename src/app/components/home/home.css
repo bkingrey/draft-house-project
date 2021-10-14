@@ -1,0 +1,61 @@
+.welcome-header {
+  position: absolute;
+  width: 100%;
+  height: 560px;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(135.99deg, #ff009d 3.42%, #f5b324 96.5%);
+  display: flex;
+  justify-content: center;
+}
+.welcome-header:before,
+.welcome-header:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  transform-origin: right top;
+  transform: skewY(-3deg);
+}
+
+.welcome-arrow {
+  font-family: Damion;
+  font-size: 38px;
+  width: 260px;
+  height: 66px;
+  margin: 0 auto;
+  top: 0px;
+  position: absolute;
+  background: #090909;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.welcome-arrow > span {
+  transform: rotate(-5deg) skew(-5deg);
+}
+.welcome-arrow:before,
+.welcome-arrow:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 24px 130px 0 130px;
+  border-color: transparent;
+  top: 100%;
+  left: -1px;
+  position: absolute;
+}
+.welcome-arrow:after {
+  border-color: #090909 transparent transparent transparent;
+  top: calc(100% - 1px);
+}
+
+.hero-logo {
+  position: absolute;
+  top: 100px;
+}
